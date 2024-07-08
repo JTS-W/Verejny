@@ -3,31 +3,41 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Interna-TU</title>
+    <style>
+      .centered-images {
+        text-align: center;
+      }
+      #changingText {
+        font-size: 3em; /* Velikost textu */
+        font-family: "Times New Roman", Times, serif;
+        color: #000066; /* Výchozí barva textu */
+      }
+    </style>
   </head>
   <body>
-    <div align="center">
-      <font face="Times New Roman, Times, serif">
-        <b>
-          <font size="+3">
-            <font color="#000066">Interní a metabolická ambulance</font><br>
-            <font size="+2"><br>
-              <font size="+1">
-                po: 8:00 - 12:00, 13:00-15:00<br>
-                út: 7:00 - 12:00, 13:00-15:00<br>
-                st: dle objednání, sestra přítomna<br><br>
-                čt: 8:00 - 12:00, 13:00 - 18:00<br>
-                pá: 7:00 - 12:00
-              </font>
-            </font>
-          </font>
-        </b>
-      </font>
-      <br>
-      <img src="AU-LOGO.png" alt="LOGO" width="592" height="584"><br><br>
-      <img src="AU-ORDINACE-LEKAR.jpg" alt="Lekarka" width="532" height="400"><br><br>
-      <img src="AU-ORDINACE-SESTRA.jpg" alt="Sestra" width="528" height="400"><br><br>
-      <img src="AU-EKG.jpg" alt="EKG" width="549" height="400"><br><br>
+    <div class="centered-images">
+      <b>
+        <span id="changingText">Interní a metabolická ambulance</span><br>
+        <span style="font-size: 2em;"><br>po: 8:00 - 12:00, 13:00-15:00<br>út: 7:00 - 12:00,<br>13:00-15:00<br>st: dle objednání, sestra přítomna<br>čt: 8:00 - 12:00, 13:00 -18:00<br>pá: 7:00 - 12:00</span><br>
+        <img src="AU-LOGO.png" alt="LOGO" width="592" height="584"><br><br>
+        <img src="AU-ORDINACE-LEKAR.jpg" alt="Lekarka" width="532" height="400"><br><br>
+        <img src="AU-ORDINACE-SESTRA.jpg" alt="Sestra" width="528" height="400"><br><br>
+        <img src="AU-EKG.jpg" alt="EKG" width="549" height="400"><br><br>
+      </b>
     </div>
+
+    <script>
+      const colors = ['#000066', '#000000', '#8B0000', '#006400'];
+      let currentColorIndex = 0;
+
+      function changeColor() {
+        const textElement = document.getElementById('changingText');
+        textElement.style.color = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+      }
+
+      setInterval(changeColor, 1000); // Změna barvy každou sekundu
+    </script>
   </body>
 </html>
 
