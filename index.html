@@ -4,9 +4,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU">
+    <meta name="title" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU, Šolcová, L. Šolcová, MUDr. Lucie Šolcová, MUDr. Lucie Šolcová, Ph.D.">
     <meta name="description" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov. Interna-TU nabízí špičkové zdravotní služby v oblasti interní a metabolické medicíny.">
-    <meta name="keywords" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU">
+    <meta name="keywords" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU, Šolcová, L. Šolcová, MUDr. Lucie Šolcová, MUDr. Lucie Šolcová, Ph.D.">
     <meta name="robots" content="index, follow">
     <title>Metabolická ambulance Trutnov, Interna-TU</title>
     <style>
@@ -125,28 +125,27 @@ footer {
       </footer>
     </div>
     <script>
-const colors = ['#000066', '#000000', '#8B0000', '#006400'];
-let currentColorIndex = 0;
-
-function changeColor() {
-  const textElement = document.getElementById('changingText');
-  textElement.style.color = colors[currentColorIndex];
-  currentColorIndex = (currentColorIndex + 1) % colors.length;
-}
-
-setInterval(changeColor, 1000); // Změna barvy každou sekundu
-
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showNextSlide() {
-  slides[currentSlideIndex].classList.remove('active');
-  currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-  slides[currentSlideIndex].classList.add('active');
-}
-
-setInterval(showNextSlide, 3000); // Změna obrázku každé 3 sekundy
-</script>
-  </body>
-</html>
-
+      function searchByName(name) {
+        // Zde můžete provést přesměrování na relevantní stránku podle zadaného jména
+        switch (name) {
+          case "Šolcová":
+          case "L. Šolcová":
+          case "MUDr. Lucie Šolcová":
+          case "MUDr. Lucie Šolcová, Ph.D.":
+            window.location.href = "https://interna-tu.cz"; // Přesměrování na hlavní stránku interna-tu.cz
+            break;
+          default:
+            alert('Hledá se podle jména: ' + name);
+            // Zde můžete provést skutečnou logiku pro vyhledávání podle zadaného jména
+            // Například filtrování a zobrazení relevantních výsledků na stránce
+        }
+      }
+    
+      // Příklad vyhledávání podle různých forem jména "Šolcová"
+      searchByName("Šolcová");
+      searchByName("L. Šolcová");
+      searchByName("MUDr. Lucie Šolcová");
+      searchByName("MUDr. Lucie Šolcová, Ph.D.");
+    </script>
+   </body>
+   </html> 
