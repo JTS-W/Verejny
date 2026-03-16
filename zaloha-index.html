@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="title" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU, Šolcová, L. Šolcová, MUDr. Lucie Šolcová, MUDr. Lucie Šolcová, Ph.D., MUDr. Lucie Šolcová, Lucie Šolcová, L. Šolcová, Šolcová">
+  <meta name="description" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov. Interna-TU nabízí špičkové zdravotní služby v oblasti interní a metabolické medicíny.">
+  <meta name="keywords" content="Metabolická poradna Trutnov, metabolická ambulance Trutnov, Interní a metabolická ambulance Trutnov, Interna-TU, Šolcová, L. Šolcová, MUDr. Lucie Šolcová, MUDr. Lucie Šolcová, Ph.D., MUDr. Lucie Šolcová, Lucie Šolcová, L. Šolcová, Šolcová">
+  <meta name="robots" content="index, follow">
+  <title>Interna-TU</title>
+  <style>
+    .centered-images {
+      text-align: center;
+    }
+    #changingText /* zkouška push */ {
+      font-size: 3em;
+      font-family: "Times New Roman", Times, serif;
+      color: #000066;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      -webkit-text-stroke: 1px black;
+      text-stroke: 1px black;
+    }
+    #slideshow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+    }
+    #slideshow {
+      position: relative;
+      width: 532px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="centered-images">
+    <b>
+      <span id="changingText">Interní a metabolická ambulance</span><br>
+     <br>
+     <br>
+     
+      <span style="font-size: 2em;"></span>
+    </b>
+    <span style="font-size: 2em;">
+      <font face="Times New Roman, Times, serif">
+        <b>po:</b> 8:00 - 12:00, 13:00-15:00<br>
+        <b>út:</b> 7:00 - 12:00, 13:00-15:00<br>
+        <b>st:</b> dle objednání, sestra přítomna<br>
+        <b>čt:</b> 8:00 - 12:00, 13:00 -18:00<br>
+        <b>pá:</b> 7:00 - 12:00
+      </font>
+    </span>
+    <b>
+      <span style="font-size: 2em;"></span><br>
+      <br>
+      <img src="AU-LOGO.png" alt="LOGO" width="592" height="584"><br><br>
+      <div id="slideshow-container">
+        <div id="slideshow" align="left">
+          <img class="slide active" src="AU-ORDINACE-LEKAR.JPG" alt="Lekarka" width="532" height="400">
+          <img class="slide" src="AU-ordinace-sestra.JPG" alt="Sestra" width="532" height="400">
+          <img class="slide" src="AU-EKG.JPG" alt="EKG" width="532" height="400">
+        </div>
+      </div>
+      <br>
+    </b>
+  </div>
+
+  <script>
+    const colors = ['#000066', '#000000', '#8B0000', '#006400'];
+    let currentColorIndex = 0;
+
+    function changeColor() {
+      const textElement = document.getElementById('changingText');
+      textElement.style.color = colors[currentColorIndex];
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+    }
+
+    setInterval(changeColor, 1000); // Změna barvy každou sekundu
+
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showNextSlide() {
+      slides[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      slides[currentSlideIndex].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // Změna obrázku každé 3 sekundy
+  </script>
+
+<p style="font-size: 1.2em; text-align: center; margin-top: 20px;">
+  <i>
+    Na sídle Interna TU, s.r.o., Hornova 951, Střední Předměstí, 541 01 Trutnov, 
+    uvedeném <a href="https://rejstrik-firem.kurzy.cz/19883749/interna-tu-sro/" target="_blank">zde</a> 
+    v obchodním rejstříku firem, není ordinace ani žádná jiná činnost provozována, 
+    pouze na adrese <strong>Říční 102, 541 01 Trutnov</strong>.
+  </i>
+</p>
+
+  </div>
+ 
+</body>
+</html>
