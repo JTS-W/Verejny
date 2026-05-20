@@ -66,10 +66,18 @@
 +420 793 943 333
 </a><br>
 
-<b>E-mail:</b> 
-<a href="mailto:internatu@seznam.cz">
-internatu@seznam.cz
-</a><br>
+<b>E-mail:</b>
+<span id="email"></span>
+
+<script>
+  const user = "internatu";
+  const domain = "seznam.cz";
+
+  const email = user + "@" + domain;
+
+  document.getElementById("email").innerHTML =
+    '<a href="mailto:' + email + '">' + email + '</a>';
+</script>
 
 <b>Adresa:</b> 
 <a href="https://mapy.cz/zakladni?q=Říční%20102%2C%20541%2001%20Trutnov"
